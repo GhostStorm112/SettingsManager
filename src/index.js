@@ -1,5 +1,5 @@
-const SettingModel = require('../DB/setting.mongo')
-const SubsettingModel = require('../DB/subsetting.mongo')
+const SettingModel = require('./DB/setting.mongo')
+const SubsettingModel = require('./DB/subsetting.mongo')
 const mongoose = require('mongoose')
 mongoose.Promise = Promise
 
@@ -14,8 +14,8 @@ class SettingsController {
       console.log('Unable to connect to Mongo Server.')
     }
     console.log('MongoDB connected.')
-    const setting = await this.updateSetting('test', '100', 'test')
-    const setting2 = await this.getSetting('test', '100')
+    // const setting = await this.updateSetting('test', '100', 'test')
+    // const setting2 = await this.getSetting('test', '100')
   }
   async getSetting (settingType, settingId) {
     return SettingModel.findOne({type: settingType, id: settingId}, {_id: 0, __v: -0})

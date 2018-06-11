@@ -1,0 +1,27 @@
+{
+  "name": "SettingsManager",
+  "version": "0.0.1",
+  "description": "Api for saving key/value settings",
+  "main": "src/index.js",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "global": "^4.3.2",
+    "mongo-viewer": "^0.2.0",
+    "mongoose": "^5.0.15",
+    "winston": "^2.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "author": "_112",
+  "license": "MIT"
+}

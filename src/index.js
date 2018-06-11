@@ -102,4 +102,4 @@ class SettingsController {
   }
 }
 
-module.exports = new SettingsController()
+module.exports = SettingsController

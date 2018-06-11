@@ -14,8 +14,6 @@ class SettingsController {
       console.log('Unable to connect to Mongo Server.')
     }
     console.log('MongoDB connected.')
-    // const setting = await this.updateSetting('test', '100', 'test')
-    // const setting2 = await this.getSetting('test', '100')
   }
   async getSetting (settingType, settingId) {
     return SettingModel.findOne({type: settingType, id: settingId}, {_id: 0, __v: -0})

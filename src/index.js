@@ -13,7 +13,6 @@ class SettingsController {
     } catch (e) {
       console.log('Unable to connect to Mongo Server.')
     }
-    console.log('MongoDB connected.')
   }
   async getSetting (settingType, settingId) {
     return SettingModel.findOne({type: settingType, id: settingId}, {_id: 0, __v: -0})

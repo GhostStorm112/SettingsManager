@@ -12,9 +12,9 @@ class SettingsController {
   async init () {
     try {
       await mongoose.connect(this.dburl)
-      log.info('SM', `Connected to MongoDB ${this.dburl}`)
+      log.info('SM', `Connected to ${this.dburl}`)
     } catch (e) {
-      console.log('')
+      console.log(e)
     }
   }
 

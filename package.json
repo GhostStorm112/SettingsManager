@@ -4,6 +4,7 @@
   "description": "Api for saving key/value settings",
   "main": "src/index.js",
   "dependencies": {
+    "Core": "https://gitlab.com/GhostStorm/Core.git",
     "cors": "^2.8.4",
     "global": "^4.3.2",
     "mongoose": "^5.1.4",

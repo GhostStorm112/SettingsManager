@@ -9,7 +9,8 @@ class SettingsController {
   }
   async init () {
     try {
-      await mongoose.connect(this.dburl)
+      const db = await mongoose.connect(this.dburl)
+      return db
     } catch (e) {
       console.log('Unable to connect to Mongo Server.')
     }

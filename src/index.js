@@ -1,7 +1,7 @@
 const SettingModel = require('./DB/setting.mongo')
 const SubsettingModel = require('./DB/subsetting.mongo')
 const mongoose = require('mongoose')
-const  = require('Core').Logger()
+const log = require('Core').Logger()
 mongoose.Promise = Promise
 
 class SettingsController {

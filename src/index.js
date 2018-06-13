@@ -8,12 +8,8 @@ class SettingsController {
     this.dburl = opts.dburl
   }
   async init () {
-    try {
-      const db = await mongoose.connect(this.dburl)
-      return db
-    } catch (e) {
-      console.log('Unable to connect to Mongo Server.')
-    }
+    const db = await mongoose.Connection
+    return db
   }
   async getSetting (settingType, settingId) {
     return SettingModel.findOne({type: settingType, id: settingId}, {_id: 0, __v: -0})

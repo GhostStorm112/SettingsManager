@@ -4,9 +4,6 @@ const mongoose = require('mongoose')
 mongoose.Promise = Promise
 
 class SettingsController {
-  constructor (opts) {
-    this.dburl = opts.dburl
-  }
   async init () {
     const db = await mongoose.Connection
     return db

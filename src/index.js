@@ -4,16 +4,9 @@ const mongoose = require('mongoose')
 mongoose.Promise = Promise
 
 class SettingsController {
-  constructor (opts) {
-    this.dburl = opts.dburl
-  }
   async init () {
-    try {
-      await mongoose.connect(this.dburl)
-    } catch (e) {
-      console.log('Unable to connect to Mongo Server.')
-    }
-    console.log('MongoDB connected.')
+    const db = await mongoose.Connection
+    return db
   }
   async getSetting (settingType, settingId) {
     return SettingModel.findOne({type: settingType, id: settingId}, {_id: 0, __v: -0})

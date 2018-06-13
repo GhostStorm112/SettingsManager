@@ -12,26 +12,10 @@ class SettingsController {
   async init () {
     try {
       await mongoose.connect(this.dburl)
+      log.info('SM', `Connected to MongoDB ${this.dburl}`)
     } catch (e) {
       console.log('')
     }
-
-    mongoose.Connection.on('Connecting', function () {
-      log.info('SM', 'Connecting to database')
-    })
-    mongoose.Connection.on('error', function (error) {
-      log.info('SM', `Error in db connection ${error}`)
-    })
-    mongoose.Connection.on('connected', function () {
-      log.info('SM', 'Connected to database')
-    })
-    mongoose.Connection.on('reconnected', function () {
-      log.info('SM', 'Reconnected to database')
-    })
-    mongoose.Connection.on('disconnected', async function () {
-      log.info('SM', 'Disconnected from database reconnecting')
-      await mongoose.connect(this.dburl)
-    })
   }
 
   async getSetting (settingType, settingId) {

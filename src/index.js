@@ -11,8 +11,8 @@ class SettingsController {
   }
   async init () {
     try {
-      await mongoose.connect(this.dburl)
-      log.info('SM', `Connected to ${this.dburl}`)
+      await mongoose.connect(this.dburl, {useNewUrlParser: true})
+      log.info('Settings', `Connected to ${this.dburl}`)
     } catch (e) {
       console.log(e)
     }

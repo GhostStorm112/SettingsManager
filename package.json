@@ -5,10 +5,7 @@
   "main": "src/index.js",
   "dependencies": {
     "Core": "https://gitlab.com/GhostStorm/Core.git",
-    "cors": "^2.8.4",
-    "global": "^4.3.2",
-    "mongoose": "^5.2.3",
-    "winston": "^2.4.1"
+    "mongoose": "^5.2.3"
   },
   "devDependencies": {
     "eslint": "^4.19.1",

@@ -1,8 +1,8 @@
 const SettingModel = require('./DB/setting.mongo')
 const SubsettingModel = require('./DB/subsetting.mongo')
 const mongoose = require('mongoose')
-const Core = require('Core')
-const log = new Core.Logger()
+const GhostCore = require('ghost-core')
+const log = new GhostCore.Logger()
 mongoose.Promise = Promise
 
 class SettingsController {
@@ -13,8 +13,8 @@ class SettingsController {
     try {
       await mongoose.connect(this.dburl, {useNewUrlParser: true})
       log.info('Settings', `Connected to ${this.dburl}`)
-    } catch (e) {
-      console.log(e)
+    } catch (error) {
+      log.error('Settings', error)
     }
   }
 

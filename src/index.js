@@ -14,7 +14,9 @@ class SettingsController {
       await mongoose.connect(this.dburl, {useNewUrlParser: true})
       log.info('Settings', `Connected to ${this.dburl}`)
     } catch (error) {
+      log.info('Settings', `Failed to connect to ${this.dburl}`)
       log.error('Settings', error)
+      this.init()
     }
   }
 

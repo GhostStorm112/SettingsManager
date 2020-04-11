@@ -19,7 +19,7 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "ghost-core": "https://gitlab.com/GhostStorm/Core.git"
+    "ghost-core": "git+ssh://git@gitlab.com:GhostStorm/Core.git"
   },
   "author": "_112",
   "license": "MIT"
